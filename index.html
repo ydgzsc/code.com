@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dynamic Blog</title>
+<style>
+    /* CSS样式 */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+    }
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+    .post {
+        width: 300px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>欢迎来到 陈飞鸣 的博客</h1>
+    </header>
+    <main>
+        <div class="post">
+            <h2>Post Title 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="post">
+            <h2>Post Title 2</h2>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="post">
+            <h2>Post Title 3</h2>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+    </main>
+
+    <script>
+        // JavaScript代码
+        // 模拟动态加载博客文章
+        setTimeout(function() {
+            var newPost = document.createElement('div');
+            newPost.className = 'post';
+            newPost.innerHTML = '<h2>New Post Title</h2><p>This is a new post added dynamically.</p>';
+            document.querySelector('main').appendChild(newPost);
+        }, 3000); // 3秒后动态添加新文章
+    </script>
+</body>
+</html>
